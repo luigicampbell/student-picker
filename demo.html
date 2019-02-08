@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Volunteer Generator</title>
+    <style>
+        div {
+            text-align: center;
+        }
+        button, p {
+            font-size: 2em;
+            margin: 0 auto;
+            font-family: sans-serif;
+        }
+        p {
+            font-weight: bold;
+            padding: 40px;
+            border: 11px solid #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="student"></p>
+        <button onclick="chooseStudent()">Lucky Person Is...</button>
+    </div>
+    <script>
+
+        const students = [
+            'Abigail',
+            'Amir',
+            'Bethany',
+            'Claudia',
+            'Cynthia',
+            'Enriqueta',
+            'Fredric',
+            'Jake',
+            'Jennifer',
+            'Karin',
+            'Kyle',
+            'Michael',
+            'Oscar',
+            'Ravi',
+            'Robert',
+            'SEAN',
+            'Zachary'
+        ];
+        const studentToVolunteer = students => students[ Math.floor( Math.random() * 16 ) ];
+       const chooseStudent = () => document.getElementById('student').innerHTML = studentToVolunteer(students);
+    </script>
+    
+</body>
+</html>
